@@ -7,6 +7,7 @@ The RPNCalc relies on a stack that will store the doubles. Any arithmetic operat
 *Files:
 - DoubleStack.h & .cpp: Foundational stack data structure  
 - RPNCalc.h & .cpp:	Calculator functions
+- testRPNCalc:		Test file for the RPN Calculator
 
 *Running:
 As there exists a Makefile:
