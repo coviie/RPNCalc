@@ -1,6 +1,4 @@
-COMP 15 HW 3 CalcYouLater - Reverse Polish Notation Arithmetic
   A. Written by : Jia Wen Goh
-	   UTLN : jgoh01
 	     On : 15-02-2017
 	     
   B. ** Purpose of program **
@@ -10,11 +8,8 @@ COMP 15 HW 3 CalcYouLater - Reverse Polish Notation Arithmetic
      most double, and read-in an input from another file.
      The RPNCalc will rely on a stack that will store the doubles. Any 
      arithmetic operations will be done on the top 2 doubles in the stack.
-  
-  C. ** Acknowledgements of help **
-     -
-  
-  D. ** Description of uploads **
+     
+  C. ** Description of uploads **
      * DoubleStack *
      DoubleStack.h		Class definitions, defines:
 				- the variables that will be used
@@ -36,87 +31,8 @@ COMP 15 HW 3 CalcYouLater - Reverse Polish Notation Arithmetic
      
      * Test files *
      testRPNCalc.cpp		Tests the RPNCalc
-     testDoubleStack.cpp	Tests the DoubleStack functions
      
-				Text files that tests:
-     content			- regular inputs in a file
-				- f-testing a valid and invalid file
-				- whitespace
-     test2			- regular inputs in a file, & is the file
-				  that is called by "content"
-     test3			- Determines if "q" is correctly-read in a
-				  textfile			
-     test4			- Repeatedly f-testing calling another file
-     
-     * Etc *
-     Makefile		    	Automates the compilation and linking commands
-				that users would have to otherwise type by hand
-     README		    	Readme
-     
-  E. ** How to compile and run **
+  D. ** How to compile and run **
      As there exists a Makefile:
        compile: make
        run:     ./RPNCalc
-     (To test the testDoubleStack.cpp:
-        compile: clang++ -Wall -Wextra testDoubleStack.cpp DoubleStack.cpp
-        run:	 ./a.out
-     )
-  
-  F. ** Outline of data structures & algorithms **
-     DATA STRUCTURES: 
-     Stacks
-     Stacks are last in first out (LIFO) - everytime an element is added to 
-     the stack, it will be 'popped' on top of the stack, while taking an 
-     element from the stack will take/push to top element off the stack.
-     
-     (advantages):	- Good for tasks that utilize the LIFO concept, most
-			  notably tasks that need to pull the latest thing
-			  entered 
-			  > e.g. this calculator, reversing strings/input,
-			         undo/redo functions
-			- Since the stack is a dynamically-allocated array,
-			  memory can be freed once the user is done with it.
-     (disadvantages):	- Resizing the stack requires creating a new array 
-			  if the size needs to be updated
-			- LIFO, meaning popping elements from the bottom of
-			  the stack is difficult.
-      Since the RPNCalc requires a LIFO access order (since arithmetic is
-      done on the most recent 2 elements), stacks are used.
-     
-     ALGORITHMS:
-     * DoubleStack *
-     - clear()/pop()
-       Since the stack ignores everything that isn´t within its bounds, 
-       removing one (or all) elements just called for changing the 
-       stackCount variable.
-     
-     * RPNCalc *
-     - string input 
-       Since the calculator only tackled one input at a time, a private
-       variable was added to take note of this input. This input can then
-       be used across functions.
-       
-     - readfile()
-       The readfile function was separate from the checkInput() function
-       because of its complexity.
-     
-  G. ** Details of test **
-     I tested the functions as I wrote them, ensuring that the functions work
-     before moving onto the next one. 
-     
-     I started with the DoubleStack files, as the stack acts as the foundation
-     for the calculator. I coded DoubleStack by 'category' (as listed in the 
-     .h file). Helper functions were designed to tackle specific tasks (e.g.
-     expanding the stack when it reaches capacity)
-     Tests (and valgrind checks) were done as each function was written to 
-     ensure functionality.
-     
-     I then coded the RPNCalc by function (i.e. arithmetic functions -> print
-     -> readfile), checking it as each function was coded.
-     I then tested different edge cases (e.g. file reading within a file
-     /clearing before opening a file/etc). One of these created memory errors
-     (clearing before opening a file) which required retooling the clear 
-     function (to its current state of resetting the stackCount;
-     the initial clear function deleted and reinitialized array, but
-     created the problem of sometimes deleting an array that was already 
-     deleted). 
