@@ -7,7 +7,6 @@
 
      
  **Description of uploads:**
-  
   *DoubleStack*  
   DoubleStack.h	& .cpp: the basic functions required for the stack, (e.g. popping/pushing elements, returning the size/top double of the stack, etc.)  
   
