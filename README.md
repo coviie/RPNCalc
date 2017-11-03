@@ -7,27 +7,14 @@
 
      
  **Description of uploads:**
-     *DoubleStack*
-     DoubleStack.h		Class definitions, defines:
-				- the variables that will be used
-				- the basic functions required for the stack, 
-				  (e.g. popping/pushing elements, returning
-				  the size/top double of the stack, etc.)
-     DoubleStack.cpp		Class implementations (w/ public and private 
-				vars & funcs)
-			      
-     *RPNCalc*
-     RPNCalc.h 	    		Class definitions
-				- declaring a stack object and variables that
-				  will be used
-				- the functions required for the calculator, 
-				  namely running, reading the user's input and
-				  processing the necessary functions
-     RPNCalc.cpp		Class implementations (w/ public and private 
-				vars & funcs)
+  *DoubleStack*
+  DoubleStack.h	& .cpp: the basic functions required for the stack, (e.g. popping/pushing elements, returning the size/top double of the stack, etc.)
+  
+  *RPNCalc*
+  RPNCalc.h & .cpp: functions required for the calculator, namely running, reading the user's input and processing the necessary functions
      
-     *Test files*
-     testRPNCalc.cpp		Tests the RPNCalc
+  *Test files*
+  testRPNCalc.cpp: Tests the RPNCalc
      
   **How to compile and run:**
      As there exists a Makefile:
