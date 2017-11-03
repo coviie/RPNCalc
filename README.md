@@ -1,16 +1,15 @@
-  A. Written by : Jia Wen Goh
-	     On : 15-02-2017
+  # RPN Calculator
+  **Written by**: Jia Wen Goh
 	     
-  B. ** Purpose of program **
-     A Reverse Polish Notation (RPN) calculator similar to the built-in "dc" calculator. 
+  ** Purpose of program: A Reverse Polish Notation (RPN) calculator similar to the built-in "dc" calculator. 
      The calculator performs basic arithmetic operations (+, -, x, /), clear it's 
      'memory', print the top-most double, and read-in an input from another file. The 
      RPNCalc relies on a stack that will store the doubles. Any arithmetic operations 
      will be done on the top 2 doubles in the stack.
 
      
-  C. ** Description of uploads **
-     * DoubleStack *
+ ** Description of uploads:
+     *DoubleStack*
      DoubleStack.h		Class definitions, defines:
 				- the variables that will be used
 				- the basic functions required for the stack, 
