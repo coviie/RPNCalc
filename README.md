@@ -29,7 +29,7 @@
      *Test files*
      testRPNCalc.cpp		Tests the RPNCalc
      
-  **How to compile and run**
+  **How to compile and run:**
      As there exists a Makefile:
        compile: make
        run:     ./RPNCalc
